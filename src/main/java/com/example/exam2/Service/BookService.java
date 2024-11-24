@@ -108,7 +108,7 @@ public class BookService {
         return false;
     }
 
-    public boolean unavailableBook(String id){
+    public boolean setUnavailable(String id){
 
         for (Book book : books){
 

@@ -41,7 +41,7 @@ public class UserController {
          return ResponseEntity.status(200).body(new ApiResponse("User added"));
         }
 
-        return ResponseEntity.status(400).body(new ApiResponse("User not added"));
+        return ResponseEntity.status(400).body(new ApiResponse("User is not added"));
 
     }
 
@@ -59,7 +59,7 @@ public class UserController {
             return ResponseEntity.status(200).body(new ApiResponse("User updated"));
         }
 
-        return ResponseEntity.status(400).body(new ApiResponse("User not updated"));
+        return ResponseEntity.status(400).body(new ApiResponse("User is not updated"));
     }
 
     @DeleteMapping("/delete/{id}")
@@ -72,7 +72,7 @@ public class UserController {
             return ResponseEntity.status(200).body(new ApiResponse("User deleted"));
         }
 
-        return ResponseEntity.status(400).body(new ApiResponse("User not deleted"));
+        return ResponseEntity.status(400).body(new ApiResponse("Something went wrong"));
 
     }
 
@@ -101,4 +101,6 @@ public class UserController {
         return ResponseEntity.status(200).body(userService.getAllAges(age));
 
     }
+
+
 }

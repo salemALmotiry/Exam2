@@ -45,20 +45,14 @@ public class UserService {
 
     public boolean deleteUser(String id){
 
-        int index = 0 ;
-        for (int i = 0; i < this.users.size(); i++) {
-            if (this.users.get(i).getId().equals(id)){
-               index = i;
-               break;
-            }
-        }
+     for (User user : users ){
+         if (user.getId().equals(id)){
+             users.remove(user);
+             return true;
+         }
+     }
 
-        if (index == 0 ){
-            return false;
-        }else {
-            this.users.remove(index);
-            return true;
-        }
+     return false;
     }
 
     public ArrayList<User> getAllBalance(double balance ){

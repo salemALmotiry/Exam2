@@ -146,7 +146,7 @@ public class BookController {
             return ResponseEntity.status(400).body(new ApiResponse("Book is already unavailable"));
         }
 
-        boolean isChange = bookService.unavailableBook(bookId);
+        boolean isChange = bookService.setUnavailable(bookId);
         if(isChange){
             return ResponseEntity.status(200).body(new ApiResponse("Book unavailable status has been changed"));
 
